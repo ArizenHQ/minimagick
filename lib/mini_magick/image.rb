@@ -392,7 +392,7 @@ module MiniMagick
     #   if you want to add something.
     # @return [self]
     #
-    def format(format, page = 0, read_opts={})
+    def format(format, page, read_opts={})
       if @tempfile
         new_tempfile = MiniMagick::Utilities.tempfile(".#{format}")
         new_path = new_tempfile.path

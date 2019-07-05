@@ -182,6 +182,8 @@ module MiniMagick
       end
 
       def path
+        return @path if @path.empty?
+
         value = @path
         value += "[0]" unless value =~ /\[\d+\]$/
         value
